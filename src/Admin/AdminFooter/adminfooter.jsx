@@ -27,7 +27,7 @@ const AdminFooter = () => {
       {/* Reels */}
       <i
         onClick={() => {
-          navigate('/reel');
+          navigate('/admin/fundlist');
         }}
         className="fa-solid fa-clapperboard admin-reels-icon admin-icon"
       ></i>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./addnercha.css";
 import AdminNavbar from "../AdminNavbar/adminnavbar";
+import AdminFooter from "../AdminFooter/adminfooter";
 
 // ✅ Environment-aware backend URL
 const BASE_URL =
@@ -121,6 +122,7 @@ const AddNercha = () => {
 
         {message && <p className="form-message">{message}</p>}
       </div>
+      <AdminFooter/>
     </>
   );
 };
