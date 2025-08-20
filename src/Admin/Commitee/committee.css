@@ -1,0 +1,97 @@
+/* committee.css */
+
+.committee-container {
+  max-width: 480px; /* mobile-first layout */
+  margin: 10px auto;
+  padding: 80px 15px 70px; /* leave space for navbar & footer */
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.committee-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Top roles (President, Secretary, Treasurer) */
+.committee-top {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Grid for others */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+  color: #444;
+}
+
+/* Each card */
+.committee-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.committee-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #eee;
+}
+
+.committee-card h3 {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.committee-card .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.committee-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 3px 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .committee-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .committee-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,60 @@
+.video-reels-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  margin-top: -70px;
+  background: #000; /* full black background */
+}
+
+.video-container {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000; /* black around video */
+}
+
+.video-player {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* fit inside without cropping */
+  margin: auto;
+  display: block;
+}
+
+/* Overlay elements */
+.video-username,
+.video-icons,
+.video-title {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+}
+
+.video-username {
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.video-icons {
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.video-title {
+  position: absolute;
+  bottom: 90px;
+  left: 20px;
+  font-size: 16px;
+  max-width: 70%;
+  line-height: 1.4;
+}

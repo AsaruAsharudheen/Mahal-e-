@@ -1,0 +1,154 @@
+/* ---------- Container ---------- */
+.list-nercha-container {
+  max-width: 900px;
+  margin: 90px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Title ---------- */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ---------- Filter Section ---------- */
+.filter-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-container label {
+  font-weight: 500;
+  margin-right: 10px;
+  color: #333;
+}
+
+.filter-container select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.filter-container select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+/* ---------- Table ---------- */
+.nercha-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nercha-table thead {
+  background: #007bff;
+  color: white;
+}
+
+.nercha-table th,
+.nercha-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.nercha-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.nercha-table tr:hover {
+  background: #eef5ff;
+  transition: 0.3s;
+}
+
+/* ---------- Loading & No Data ---------- */
+.loading,
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  padding: 15px;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media screen and (max-width: 768px) {
+  .nercha-table thead {
+    display: none; /* Hide table header */
+  }
+
+  .nercha-table,
+  .nercha-table tbody,
+  .nercha-table tr,
+  .nercha-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .nercha-table tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+  .nercha-table td {
+    text-align: left;
+    padding: 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .nercha-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #007bff;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+}
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}

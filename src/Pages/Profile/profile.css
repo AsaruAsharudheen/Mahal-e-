@@ -1,0 +1,75 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fafafa;
+  min-height: 100vh;
+  padding: 90px 15px;
+}
+
+/* Premium Profile Card */
+.profile-top-card {
+  background: linear-gradient(145deg, #ff416c, #ff4b2b);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-avatar {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+.profile-top-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #fafafa;
+}
+
+.profile-top-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Instagram-Style Button Column */
+.profile-options {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  gap: 12px;
+}
+
+.profile-btn {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.profile-btn:hover {
+  background: #f2f2f2;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #ff416c;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+/* Limit the entire website to mobile width even on desktop */
+body {
+  max-width: 480px; /* typical mobile width */
+  margin: 0 auto; /* center it on larger screens */
+  overflow-x: hidden;
+  padding-top: 70px; /* offset for fixed navbar */
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+}
+
+/* ---------------- Admin Navbar ---------------- */
+.admin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-family: 'Merienda', cursive;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.admin-navbar h1 {
+  font-size: 24px;
+  padding-top: 15px;
+}
+
+.admin-symbol .fa-bars {
+  color: #000;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ---------------- Modal Background ---------------- */
+.admin-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 27, 36, 0.85); /* darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ---------------- Modal Content Box ---------------- */
+.admin-modal-content {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 85%;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease;
+}
+
+/* Close button */
+.admin-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  transition: 0.2s;
+}
+
+.admin-close:hover {
+  color: #ff4d4d;
+  transform: scale(1.1);
+}
+
+/* ---------------- Menu Buttons ---------------- */
+.admin-menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.admin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 18px;
+  border-radius: 12px;
+  transition: 0.3s;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Hover */
+.admin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons inside buttons */
+.menu-icon {
+  font-size: 18px;
+}
+
+/* 🎨 Unique Button Colors */
+.btn-image {
+  background:white;
+}
+
+.btn-video {
+  background:white;
+
+}
+
+.btn-fund {
+  background:white;
+
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

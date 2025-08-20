@@ -1,0 +1,83 @@
+/* addvideo.css */
+
+.add-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.add-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-form input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.add-form input[type="text"]:focus {
+  border-color: #e91e63;
+}
+
+.add-form label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.add-form input[type="file"] {
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.add-form button {
+  padding: 14px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-form button:hover {
+  background-color: #d81b60;
+}
+
+.preview-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.preview-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.preview-section video {
+  border-radius: 12px;
+  max-width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

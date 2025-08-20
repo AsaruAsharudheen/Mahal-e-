@@ -1,0 +1,32 @@
+.admin-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 480px; /* match mobile layout */
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.admin-icon {
+  cursor: pointer;
+}
+
+/* Special style for reels icon if needed */
+.admin-reels-icon {
+  color: #ff3b30; /* example highlight color */
+}
+
+/* Optional: center the footer for larger screens */
+@media (min-width: 481px) {
+  .admin-footer {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,52 @@
+.admin-home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1b24, #1a2a34);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.admin-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.admin-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.menu-card {
+  background: #fff;
+  color: #0f1b24;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card:hover {
+  background: #ff4d4d;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.menu-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.menu-card p {
+  font-size: 16px;
+  font-weight: 500;
+}
