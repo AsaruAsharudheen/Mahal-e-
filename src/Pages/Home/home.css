@@ -1,129 +1,139 @@
+/* Reset & body */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   background-color:white;
-}
-.liked {
-  color: red;
+  color: #333;
 }
 
-
+/* Post Feed */
 .post-feed {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 0;
-  margin-top: 20px;
-  gap: 10px;
-  margin-bottom: 90px;
-  background-color: white;
-
-  /* background-color: #333; */
+  padding: 10px 0;
+  gap: 15px;
+  margin-bottom: 100px;
 }
 
+/* Post Card */
 .post-image-container {
-  position: relative;
   width: 100%;
-  max-width: 410px;
-  background-color: rgb(255, 255, 255);
+  max-width: 420px;
+  background-color: white;
+  border-radius: 12px;
   overflow: hidden;
-  height: 574px;
-  /* padding-top: 20px; */
-  /* border-radius: 10px; */
-  /* box-shadow: 0 0 8px rgba(0,0,0,0.05); */
-  /* background-color: #333; */
-}
-
-/* Header */
-.post-header {
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 12px; */
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+  flex-direction: column;
+  position: relative;
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.username {
-  font-weight: 700;
-  font-size: 17px;
-  color: #333;
-}
-
-/* Image & Video styling (shared class) */
-.post-media {
+/* Post Media (image/video) */
+.post-media,
+.post-video {
   width: 100%;
-  height: 520px;
+  max-height: 520px;
   object-fit: cover;
   display: block;
+  background: #000;
+  cursor: pointer;
 }
 
-/* Overlay icons */
-
-
-.left-icons,
-.right-icons {
+.video-wrapper {
+  width: 100%;
+  height: 500px;
   display: flex;
-  gap: 12px;
-  font-size: 18px;
-  color: black;
-  padding: 6px 12px;
-  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
 }
 
-/* Caption */
+/* Caption Section */
 .caption-section {
-  font-size: 18px;
+  padding: 12px 15px;
+  font-size: 15px;
   color: #333;
-  padding-top: 5px;
-  padding-left: 15px;
 }
 
 .caption-section p {
-  margin: 0;
-  line-height: 1.5;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.caption-section strong {
+  font-weight: 600;
 }
 
 /* Timestamp */
 .timestamp {
   display: block;
-  /* margin-top: 6px; */
   font-size: 12px;
-  color: #888;
-  padding-bottom: 5px;
-  /* background-color: #333; */
+  color: #999;
+  margin-top: 4px;
 }
 
-/* Hide on desktop */
+/* Liked state (optional) */
+.liked {
+  color: #e74c3c;
+}
+
+/* Preview section for uploads */
+.preview-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.preview-section img,
+.preview-section video {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Overlay icons (if needed for like/share) */
+.left-icons,
+.right-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 10px;
+}
+
+/* Responsive: Hide feed on desktop if mobile-only */
 @media screen and (min-width: 769px) {
   .post-feed {
     display: none;
   }
-}
-/* Video wrapper */
-.video-wrapper {
-  width: 100%;
-  height: 500px; /* or 100vh for fullscreen reels */
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.post-video {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* keeps full video visible */
-  background: #000;
 }
