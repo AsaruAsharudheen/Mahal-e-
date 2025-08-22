@@ -120,7 +120,7 @@ const Home = () => {
             {/* Caption & timestamp */}
             <div className="caption-section">
               <p>
-                <strong>@{post.title || 'user'}</strong> {post.content}
+                <strong>{post.title || 'user'}</strong> {post.content}
               </p>
               <span className="timestamp">{formatTimeAgo(post.createdAt)}</span>
             </div>

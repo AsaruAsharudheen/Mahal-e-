@@ -34,7 +34,7 @@ const AdminHome = () => {
             <FaDonate className="menu-icon" />
             <p>NerchaList</p>
           </div>{' '}
-          <div className="menu-card" onClick={() => navigate('/listnercha')}>
+          <div className="menu-card" onClick={() => navigate('/admin/fundlist')}>
             <FaDonate className="menu-icon" />
             <p>FundList</p>
           </div>{' '}

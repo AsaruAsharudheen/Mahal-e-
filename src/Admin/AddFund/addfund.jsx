@@ -53,13 +53,10 @@ const AddFund = () => {
       return alert('Fill all person fields');
 
     axios
-      .post(
-        `${BASE_URL}/api/funds/categories/${selectedCategoryId}/persons`,
-        {
-          name: personName.trim(),
-          amount: Number(personAmount),
-        }
-      )
+      .post(`${BASE_URL}/api/funds/categories/${selectedCategoryId}/persons`, {
+        name: personName.trim(),
+        amount: Number(personAmount),
+      })
       .then(res => {
         const newPerson = res.data;
         setCategories(prevCategories =>
@@ -88,14 +85,11 @@ const AddFund = () => {
       return alert('Fill all expense fields');
 
     axios
-      .post(
-        `${BASE_URL}/api/funds/categories/${expenseCategoryId}/expenses`,
-        {
-          description: expenseDesc.trim(),
-          amount: Number(expenseAmount),
-          date: expenseDate,
-        }
-      )
+      .post(`${BASE_URL}/api/funds/categories/${expenseCategoryId}/expenses`, {
+        description: expenseDesc.trim(),
+        amount: Number(expenseAmount),
+        date: expenseDate,
+      })
       .then(() => {
         alert('Expense added');
         setExpenseDesc('');
@@ -114,7 +108,7 @@ const AddFund = () => {
   return (
     <>
       <AdminNavbar />
-      <div className="addfund-container">
+      <div style={{ marginTop: '90px' }} className="addfund-container">
         <h1>Add Fund Details</h1>
 
         {/* Add Category */}
