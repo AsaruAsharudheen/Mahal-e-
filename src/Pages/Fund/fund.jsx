@@ -122,7 +122,7 @@ const Fund = () => {
             </div>
           </div>
         ) : (
-          <p>Select a category to view details.</p>
+          <p></p>
         )}
       </div>
       <Footer />

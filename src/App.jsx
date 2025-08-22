@@ -15,6 +15,7 @@ import FundList from './Admin/List/fundlist';
 import Committee from './Admin/Commitee/Committee';
 import CommitteePage from './Pages/CommitteePage/committeepage';
 import AdminProfile from './Admin/Adminprofile/adminprofile';
+import AdminMedia from './Admin/AdminMedia/adminmedia';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/admin/committee" element={<Committee />} />
         <Route path="/committee" element={<CommitteePage />} />
         <Route path="/admin/profile" element={<AdminProfile />} />
+        <Route path="/admin/media" element={<AdminMedia />} />
       </Routes>
     </>
   );
